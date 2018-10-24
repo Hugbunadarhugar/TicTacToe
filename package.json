@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf node_modules",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,13 @@
   },
   "homepage": "https://github.com/Hugbunadarhugar/TicTacToe#readme",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "lodash": "^4.17.11"
   }
 }
