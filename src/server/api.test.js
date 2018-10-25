@@ -9,22 +9,22 @@ const app = require("../app");
 */
 describe("OPTIONS /server", () => {
   it("should return 200 status code", async () => {
-    const res = await request(app).options("/api");
+    const res = await request(app).options("/server");
     expect(res.status).toBe(200);
   });
 });
 
 describe("GET /server", () => {
   it("should return 405 status code and an error message", async () => {
-    const res = await request(app).get("/api");
+    const res = await request(app).get("/server");
     expect(res.status).toBe(405);
     expect(res.body).toHaveProperty("error");
   });
 });
 
-describe("GET /api/greeting/{NAME}", () => {
+describe("GET /server/greeting/{NAME}", () => {
   it("should return an object with the greeting attribute", async () => {
-    const res = await request(app).get("/api/greeting/Name");
+    const res = await request(app).get("/server/greeting/Name");
     expect(res.status).toBe(200);
     expect(res.body).toHaveProperty("greeting");
   });
