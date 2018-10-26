@@ -1,4 +1,4 @@
 function greeting(name) {
-    return "Hello, " + name + "!";
+    return "Hi, " + name + "!";
 }
 module.exports = greeting;
