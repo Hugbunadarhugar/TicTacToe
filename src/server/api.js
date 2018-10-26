@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
   res.status(405).send({ error: "GET method not allowed, try OPTIONS." });
 });
 
-//this is unnecessary for this web applications
+//this is unnecessary for this web application
 router.options("/", (req, res) => {
   const options = {
     options: { get: ["/api/greeting", "/api/greeting/{NAME}"] }
