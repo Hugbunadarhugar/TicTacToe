@@ -1,4 +1,5 @@
 var gameField = [[]];
+var activePlayer;
 //var $box = $("td");
 
 //To start the game
@@ -9,10 +10,14 @@ function resetCanvas() {
     gameField = [[" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "]];
-    //To empty the td's
-   /* for (i = 0; i < $box.length; i++) {
-        $($box[i]).html("");
-    }*/
+
+    //Setting the starting player as X
+    activePlayer = "X";
+}
+
+function boxClicked(x, y) {
+    if (gameField[x][y] == " ") 
+        gameField[x][y] = activePlayer;
 }
 
 function getGamefield () {
@@ -22,3 +27,5 @@ function getGamefield () {
 module.exports.resetCanvas = resetCanvas;
 module.exports.getGamefield = getGamefield;
 module.exports.gameField = gameField;
+module.exports.activePlayer = activePlayer;
+module.exports.boxClicked = boxClicked;
