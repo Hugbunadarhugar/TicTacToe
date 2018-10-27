@@ -1,6 +1,5 @@
 var gameField = [[]];
 var activePlayer;
-//var $box = $("td");
 
 //To start the game
 resetCanvas();
@@ -15,17 +14,35 @@ function resetCanvas() {
     activePlayer = "X";
 }
 
+//Clicking on a field
 function boxClicked(x, y) {
-    if (gameField[x][y] == " ") 
+    if (gameField[x][y] == " "){
         gameField[x][y] = activePlayer;
+    }
 }
 
 function getGamefield () {
     return gameField;
 }
 
+function getActivePlayer() {
+    return activePlayer;
+}
+
+function changePlayers() {
+    if (activePlayer == "X") {
+        activePlayer = "O";
+    }
+    else {
+        activePlayer = "X";
+    }
+}
+
+
 module.exports.resetCanvas = resetCanvas;
 module.exports.getGamefield = getGamefield;
 module.exports.gameField = gameField;
 module.exports.activePlayer = activePlayer;
 module.exports.boxClicked = boxClicked;
+module.exports.changePlayers = changePlayers;
+module.exports.getActivePlayer = getActivePlayer;

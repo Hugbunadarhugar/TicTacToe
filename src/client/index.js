@@ -1,6 +1,7 @@
 const _ = require("lodash");
 const ticTacToe = require('../logic/ticTacToe');
 const css = require("./styles.css");
+var player = "X";
 
 var $box = $("td");
 
@@ -10,6 +11,7 @@ $box.on("click", function (event) {
     var y = Math.floor((event.clientY - gameBoard.getBoundingClientRect().top) / 100);
 
     ticTacToe.boxClicked(x,y);
-    
-    $(this).html(ticTacToe.activePlayer);
+    player = ticTacToe.getActivePlayer();
+    $(this).html(player);
+    player = ticTacToe.changePlayers();
 });

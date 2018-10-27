@@ -10,14 +10,18 @@ it("should begin a new game with an empty gameboard", () => {
     [" ", " ", " "]]);
 });
 
-
-
 it("should return X as the first element", () => {
   Game.resetCanvas();
   Game.boxClicked(0,0); 
   expect(Game.getGamefield()).toEqual([["X", " ", " "],
   [" ", " ", " "],
   [" ", " ", " "]])
+});
+
+it ("should change active player from X to O", () => {
+  Game.activePlayer = "X";
+  Game.changePlayers();
+  expect(Game.getActivePlayer()).toBe("O");
 });
 
 
