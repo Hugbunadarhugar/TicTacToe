@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "../", "dist")));
 
 // For all queries to localhost:3000/api/...
 // use the API router (see below)
-app.use("/server", api);
+app.use("/api", api);
 
 // For any other route (URL) just send an error
 app.get("*", (req, res) => {

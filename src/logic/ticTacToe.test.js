@@ -1,4 +1,12 @@
-const greeting = require('./ticTacToe');
-test("returns greeting with custom name", () => {  
-    expect(greeting("Bei")).toBe("Hello, Bei!");
+const Game = require('./ticTacToe');
+
+it("should begin a new game with an empty gameboard", () => {
+  
+  function testResetCanvas(){
+    Game.resetCanvas();
+    return Game.getGamefield();
+  }  
+    expect(testResetCanvas()).toEqual([[" ", " ", " "],
+    [" ", " ", " "],
+    [" ", " ", " "]]);
 });
