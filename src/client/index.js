@@ -1,4 +1,5 @@
-const _= require("lodash");
+const _ = require("lodash");
+require("./styles.css");
 
 function component() {
     let element = document.createElement('div');  
