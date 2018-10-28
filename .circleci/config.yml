@@ -32,3 +32,13 @@ jobs:
       - run: npm test src/client/ src/logic/ src/server/
       - run: npm install
       - run: npm run build
+   deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy dev to Heroku
+          command: |
+            git push https://heroku:94ec1328-eb72-42ef-9773-aab2a4a8a687@git.heroku.com/hugbunadarhugar.git HEAD:master
+            
