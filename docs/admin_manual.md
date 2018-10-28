@@ -7,7 +7,7 @@ The following programs are needed to run TicTacToe using a text editor of choice
 * Git Bash (for Windows) or Terminal (for MacOS and Linux)
 * A GitHub account
 ## Installation
-* Clone git repository: https://github.com/Hugbunadarhugar/TicTacToe.git
+* Clone git repository: [https://github.com/Hugbunadarhugar/TicTacToe.git](https://github.com/Hugbunadarhugar/TicTacToe.git)
 * Set up git
 * Install Java
 ## Run
