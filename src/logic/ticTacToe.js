@@ -85,6 +85,18 @@ function checkDiagonal(x, y){
 
 }
 
+//Checking for tie
+function checkTie(){
+    for(var i = 0; i < 3; i++){
+        for(var j = 0; j < 3; j++){
+            if(gameField[i][j] == " "){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 function getWin(){
     return win;
 }
@@ -102,3 +114,4 @@ module.exports.win = win;
 module.exports.getWin = getWin;
 module.exports.checkHorizontal = checkHorizontal;
 module.exports.checkDiagonal = checkDiagonal;
+module.exports.checkTie = checkTie;

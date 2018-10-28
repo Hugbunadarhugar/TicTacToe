@@ -25,6 +25,10 @@ $box.on("click", function (event) {
         turn.innerText = "Game over!";
         $(board).addClass("Game over");
     }
+    else if(ticTacToe.checkTie()){
+        turn.innerText = "It's a tie!";
+        $(board).addClass("Game over");
+    }
     else{
         //Telling whose turn it is
         turn.innerText =  ticTacToe.getActivePlayer() + ", It's your turn!";

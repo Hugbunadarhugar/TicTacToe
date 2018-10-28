@@ -76,3 +76,12 @@ it("should return a win on a left side diagonal row", () => {
   Game.checkDiagonal(0,2);
   expect(Game.getWin()).toBe(true);
 });
+
+
+it("should return a tie on a full field", () => {
+  Game.gameField = [["X", "O", "O"],
+  ["O", "X", "X"],
+  ["X", "X", "O"]]
+  Game.checkTie();
+  expect(Game.getWin()).toBe(true);
+});
