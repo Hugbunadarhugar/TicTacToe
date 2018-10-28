@@ -1,25 +1,28 @@
 var gameField = [[]];
 var activePlayer;
-//Variable to keep track if there is a winner in the match
+
+// Variable to keep track if there is a winner in the match
 var win;
-//To keep track of each player's score
+
+// To keep track of each player's score
 var xScore = 0;
 var oScore = 0;
-//To start the game
+
+// Initializing the game board
 resetCanvas();
 
-//Initializing the canvas
+// Emptying the game board and resetting activePlayer to X
 function resetCanvas() {
     gameField = [[" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "]];
-    //No winner in the beginning
+    // No winner in the beginning
     win = false;
-    //Setting the starting player as X
+    // Setting the starting player as X
     activePlayer = "X";
 }
 
-//Clicking on a field
+// Clicking on a field in the gameboard
 function boxClicked(x, y) {
     if (gameField[x][y] == " "){
         gameField[x][y] = activePlayer;
@@ -30,14 +33,7 @@ function boxClicked(x, y) {
     }
 }
 
-function getGamefield () {
-    return gameField;
-}
-
-function getActivePlayer() {
-    return activePlayer;
-}
-
+// Changes the active player from the current to the other
 function changePlayers() {
     if (activePlayer == "X") {
         activePlayer = "O";
@@ -47,13 +43,13 @@ function changePlayers() {
     }
 }
 
-//Checking if the last player made a win
+// Checking if the last player made a win
 function checkForWin(x, y){
-    //Vertical
+    // Vertical
     checkVertical(x);
-    //Horizontal
+    // Horizontal
     checkHorizontal(y);
-    //Diagonal
+    // Diagonal
     checkDiagonal(x ,y);
     if(win){
         fillArray();
@@ -62,34 +58,34 @@ function checkForWin(x, y){
     return false;
 }
 
-//Checking for vertical win
+// Checking for vertical win
 function checkVertical(x){
     if(gameField[x][0] == gameField[x][1] && gameField[x][0] ==gameField[x][2]){
         win = true;
     }
 }
 
-//Checking for horizontal win
+// Checking for horizontal win
 function checkHorizontal(y){
     if(gameField[0][y] == gameField[1][y] && gameField[0][y] == gameField[2][y]){
         win = true;
     }
 }
 
-//Checking for diagonal win
+// Checking for diagonal win
 function checkDiagonal(x, y){
-    //If x == y then there might be a diagonal win to the right
+    // If x == y then there might be a diagonal win to the right
     if(x == y && gameField[0][0] == gameField[1][1] && gameField[0][0] == gameField[2][2]){
         win = true;
     }
-    //If x + y = 2 then there might be a diagonal win to the left
+    // If x + y = 2 then there might be a diagonal win to the left
     else if(x + y == 2 && gameField[2][0] == gameField[1][1] && gameField[2][0] == gameField[0][2]){
         win = true;
     }
 
 }
 
-//Checking for tie
+// Checking for tie
 function checkTie(){
     for(var i = 0; i < 3; i++){
         for(var j = 0; j < 3; j++){
@@ -101,11 +97,7 @@ function checkTie(){
     return true;
 }
 
-function getWin(){
-    return win;
-}
-
-//Fills the gameField array
+// Fills the gameField array
 function fillArray(){
     for(var i = 0; i < 3; i++){
         for(var j = 0; j < 3; j++){
@@ -114,7 +106,7 @@ function fillArray(){
     }
 }
 
-//Raising the score after a win
+// Raising the score after a win
 function raiseScore() {
     if (activePlayer == "X") {
         xScore++;
@@ -124,12 +116,24 @@ function raiseScore() {
     }
 }
 
+function getWin(){
+    return win;
+}
+
 function getXScore(){
     return xScore;
 }
 
 function getOScore(){
     return oScore;
+}
+
+function getGamefield () {
+    return gameField;
+}
+
+function getActivePlayer() {
+    return activePlayer;
 }
 
 module.exports.resetCanvas = resetCanvas;
