@@ -17,6 +17,9 @@ $box.on("click", function (event) {
         $(this).html(player);
         player = ticTacToe.changePlayers();
     }
+    else if(ticTacToe.gameField[x][y] != " " && $(board).hasClass("Game over")){
+        alert("The game is over.");
+    }
     else{
         alert("Please click on an empty field.");
     }

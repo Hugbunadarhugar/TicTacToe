@@ -53,6 +53,7 @@ function checkForWin(x, y){
     //Diagonal
     checkDiagonal(x ,y);
     if(win){
+        fillArray();
         return true;
     }
     return false;
@@ -101,6 +102,15 @@ function getWin(){
     return win;
 }
 
+//Fills the gameField array
+function fillArray(){
+    for(var i = 0; i < 3; i++){
+        for(var j = 0; j < 3; j++){
+            gameField[i][j] = activePlayer;
+        }
+    }
+}
+
 module.exports.resetCanvas = resetCanvas;
 module.exports.getGamefield = getGamefield;
 module.exports.gameField = gameField;
@@ -115,3 +125,4 @@ module.exports.getWin = getWin;
 module.exports.checkHorizontal = checkHorizontal;
 module.exports.checkDiagonal = checkDiagonal;
 module.exports.checkTie = checkTie;
+module.exports.fillArray = fillArray;

@@ -85,3 +85,11 @@ it("should return a tie on a full field", () => {
   Game.checkTie();
   expect(Game.getWin()).toBe(true);
 });
+
+it("should fill the gameField array with the current active player", () => {
+  Game.activePlayer = "X";
+  Game.fillArray();
+  expect(Game.getGamefield()).toEqual([["X", "X", "X"],
+  ["X", "X", "X"],
+  ["X", "X", "X"]]);
+});
