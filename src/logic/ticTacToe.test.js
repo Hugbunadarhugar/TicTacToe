@@ -47,6 +47,13 @@ it("should return a win on a vertical row", () => {
   Game.boxClicked(0,2);
   Game.checkVertical(0);
   expect(Game.getWin()).toBe(true);
-})
+});
 
-
+it("should return a win on a horizontal row", () => {
+  Game.resetCanvas();
+  Game.boxClicked(0,0); 
+  Game.boxClicked(1,0);
+  Game.boxClicked(2,0);
+  Game.checkHorizontal(0);
+  expect(Game.getWin()).toBe(true);
+});

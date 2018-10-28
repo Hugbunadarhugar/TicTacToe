@@ -48,6 +48,8 @@ function changePlayers() {
 function checkForWin(x, y){
     //Vertical
     checkVertical(x);
+    //Horizontal
+    checkHorizontal(y);
     if(win){
         return true;
     }
@@ -57,6 +59,13 @@ function checkForWin(x, y){
 //Checking for vertical win
 function checkVertical(x){
     if(gameField[x][0] == gameField[x][1] && gameField[x][0] ==gameField[x][2]){
+        win = true;
+    }
+}
+
+//Checking for horizontal win
+function checkHorizontal(y){
+    if(gameField[0][y] == gameField[1][y] && gameField[0][y] == gameField[2][y]){
         win = true;
     }
 }
@@ -75,3 +84,4 @@ module.exports.checkForWin = checkForWin;
 module.exports.checkVertical = checkVertical;
 module.exports.win = win;
 module.exports.getWin = getWin;
+module.exports.checkHorizontal = checkHorizontal;
