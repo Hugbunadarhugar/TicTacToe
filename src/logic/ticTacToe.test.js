@@ -24,5 +24,11 @@ it ("should change active player from X to O", () => {
   expect(Game.getActivePlayer()).toBe("O");
 });
 
+it ("should change active player from O to X", () => {
+  Game.activePlayer = "O";
+  Game.changePlayers();
+  expect(Game.getActivePlayer()).toBe("X");
+});
+
 
 
