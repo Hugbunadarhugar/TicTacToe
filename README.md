@@ -14,7 +14,7 @@ This project was made for the course SC-T-303 Software Engineering at Reykjavík
 ## The game
 
 ## Links to documentation
-[Design report]() | [Development manual]() | [Administration manual]()
+[Design report](https://github.com/Hugbunadarhugar/TicTacToe/blob/master/docs/design_report.md) | [Development manual](https://github.com/Hugbunadarhugar/TicTacToe/blob/master/docs/dev_manual.md) | [Administration manual](https://github.com/Hugbunadarhugar/TicTacToe/blob/master/docs/admin_manual.md)
 
 ## Link to Circle CI testing
 [![CircleCI](https://circleci.com/gh/Hugbunadarhugar/TicTacToe.svg?style=svg)](https://circleci.com/gh/Hugbunadarhugar/TicTacToe)
