@@ -2,6 +2,9 @@ var gameField = [[]];
 var activePlayer;
 //Variable to keep track if there is a winner in the match
 var win;
+//To keep track of each player's score
+var xScore;
+var oScore;
 //To start the game
 resetCanvas();
 
@@ -14,6 +17,9 @@ function resetCanvas() {
     win = false;
     //Setting the starting player as X
     activePlayer = "X";
+    //No score in the beginning
+    xScore = 0;
+    oScore = 0;
 }
 
 //Clicking on a field
@@ -111,6 +117,24 @@ function fillArray(){
     }
 }
 
+//Raising the score after a win
+function raiseScore() {
+    if (activePlayer == "X") {
+        xScore++;
+    }
+    else {
+        oScore++;
+    }
+}
+
+function getXScore(){
+    return xScore;
+}
+
+function getOScore(){
+    return oScore;
+}
+
 module.exports.resetCanvas = resetCanvas;
 module.exports.getGamefield = getGamefield;
 module.exports.gameField = gameField;
@@ -120,9 +144,13 @@ module.exports.changePlayers = changePlayers;
 module.exports.getActivePlayer = getActivePlayer;
 module.exports.checkForWin = checkForWin;
 module.exports.checkVertical = checkVertical;
-module.exports.win = win;
 module.exports.getWin = getWin;
 module.exports.checkHorizontal = checkHorizontal;
 module.exports.checkDiagonal = checkDiagonal;
 module.exports.checkTie = checkTie;
 module.exports.fillArray = fillArray;
+module.exports.raiseScore = raiseScore;
+module.exports.getXScore = getXScore;
+module.exports.getOScore = getOScore;
+module.exports.oScore = oScore;
+module.exports.xScore = xScore;

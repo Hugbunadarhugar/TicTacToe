@@ -93,3 +93,10 @@ it("should fill the gameField array with the current active player", () => {
   ["X", "X", "X"],
   ["X", "X", "X"]]);
 });
+
+it("should raise the score of X", () => {
+  Game.xScore = 0;
+  Game.activePlayer = "X";
+  Game.raiseScore();
+  expect(Game.getXScore()).toBe(1);
+});
