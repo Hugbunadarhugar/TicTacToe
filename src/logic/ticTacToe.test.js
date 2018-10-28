@@ -40,5 +40,56 @@ it ("should not change the gameboard when the same field is clicked twice", () =
   [" ", " ", " "]])
 });
 
+it("should return a win on a vertical row", () => {
+  Game.resetCanvas();
+  Game.boxClicked(0,0); 
+  Game.boxClicked(0,1);
+  Game.boxClicked(0,2);
+  Game.checkVertical(0);
+  expect(Game.getWin()).toBe(true);
+});
+
+it("should return a win on a horizontal row", () => {
+  Game.resetCanvas();
+  Game.boxClicked(0,0); 
+  Game.boxClicked(1,0);
+  Game.boxClicked(2,0);
+  Game.checkHorizontal(0);
+  expect(Game.getWin()).toBe(true);
+});
 
 
+it("should return a win on a right side diagonal row", () => {
+  Game.resetCanvas();
+  Game.boxClicked(0,0); 
+  Game.boxClicked(1,1);
+  Game.boxClicked(2,2);
+  Game.checkDiagonal(2,2);
+  expect(Game.getWin()).toBe(true);
+});
+
+it("should return a win on a left side diagonal row", () => {
+  Game.resetCanvas();
+  Game.boxClicked(2,0); 
+  Game.boxClicked(1,1);
+  Game.boxClicked(0,2);
+  Game.checkDiagonal(0,2);
+  expect(Game.getWin()).toBe(true);
+});
+
+
+it("should return a tie on a full field", () => {
+  Game.gameField = [["X", "O", "O"],
+  ["O", "X", "X"],
+  ["X", "X", "O"]]
+  Game.checkTie();
+  expect(Game.getWin()).toBe(true);
+});
+
+it("should fill the gameField array with the current active player", () => {
+  Game.activePlayer = "X";
+  Game.fillArray();
+  expect(Game.getGamefield()).toEqual([["X", "X", "X"],
+  ["X", "X", "X"],
+  ["X", "X", "X"]]);
+});
