@@ -33,6 +33,10 @@ jobs:
       - run: npm install
       - run: npm run build
       
+      - store_artifacts:
+          path: pdf
+          prefix: pdf
+      
   deploy:
     docker:
       - image: buildpack-deps:trusty
