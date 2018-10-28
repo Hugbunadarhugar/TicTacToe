@@ -2,13 +2,14 @@
   "name": "tictactoe",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "jest",
     "clean": "rm -rf node_modules",
     "start": "node server",
     "build": "webpack",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
+    "startCon": "concurrently \"webpack-dev-server\" \"nodemon\""
   },
   "repository": {
     "type": "git",
