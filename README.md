@@ -12,7 +12,7 @@ This project was made for the course SC-T-303 Software Engineering at Reykjavík
 - Natalia López
 - Þorgeir Kristján Þorgeirsson
 ## The game
-![alt text](https://github.com/Hugbunadarhugar/TicTacToe/raw/mdToPDF/docs/site.png "State diagram")
+![alt text](https://raw.githubusercontent.com/Hugbunadarhugar/TicTacToe/master/docs/site.png "State diagram")
 ## Links to documentation
 [Design report](https://github.com/Hugbunadarhugar/TicTacToe/blob/master/docs/design_report.md) | [Development manual](https://github.com/Hugbunadarhugar/TicTacToe/blob/master/docs/dev_manual.md) | [Administration manual](https://github.com/Hugbunadarhugar/TicTacToe/blob/master/docs/admin_manual.md)
 
