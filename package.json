@@ -7,7 +7,8 @@
     "test": "jest",
     "clean": "rm -rf node_modules",
     "start": "node server",
-    "build": "webpack"
+    "build": "webpack",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
