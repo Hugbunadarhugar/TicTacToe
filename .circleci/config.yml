@@ -32,7 +32,8 @@ jobs:
       - run: npm test src/client/ src/logic/ src/server/
       - run: npm install
       - run: npm run build
-   deploy:
+      
+  deploy:
     docker:
       - image: buildpack-deps:trusty
     steps:
