@@ -14,3 +14,6 @@ This is an implementation of TicTacToe made by Hugbúnaðarhugar.
 
 ## Links to documentation
 [Design report]() | [Development manual]() | [Administration manual]()
+
+## Link to Circle CI testing
+[CircleCI](https://circleci.com/gh/Hugbunadarhugar/TicTacToe)
