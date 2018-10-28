@@ -50,6 +50,8 @@ function checkForWin(x, y){
     checkVertical(x);
     //Horizontal
     checkHorizontal(y);
+    //Diagonal
+    checkDiagonal(x ,y);
     if(win){
         return true;
     }
@@ -70,9 +72,23 @@ function checkHorizontal(y){
     }
 }
 
+//Checking for diagonal win
+function checkDiagonal(x, y){
+    //If x == y then there might be a diagonal win to the right
+    if(x == y && gameField[0][0] == gameField[1][1] && gameField[0][0] == gameField[2][2]){
+        win = true;
+    }
+    //If x + y = 2 then there might be a diagonal win to the left
+    else if(x + y == 2 && gameField[2][0] == gameField[1][1] && gameField[2][0] == gameField[0][2]){
+        win = true;
+    }
+
+}
+
 function getWin(){
     return win;
 }
+
 module.exports.resetCanvas = resetCanvas;
 module.exports.getGamefield = getGamefield;
 module.exports.gameField = gameField;
@@ -85,3 +101,4 @@ module.exports.checkVertical = checkVertical;
 module.exports.win = win;
 module.exports.getWin = getWin;
 module.exports.checkHorizontal = checkHorizontal;
+module.exports.checkDiagonal = checkDiagonal;
