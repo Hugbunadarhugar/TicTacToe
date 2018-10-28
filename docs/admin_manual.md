@@ -1,6 +1,6 @@
 # Administration manual
 ## Introduction
-This administration manual is intended for a well-known game of TicTacToe. The game is accessible via browser, following this link: www.example.com. This manual is intended administrative purposes in order to set the program up on a server(?).
+This administration manual is intended for a well-known game of TicTacToe. The game is accessible via browser, following this link: [https://hugbunadarhugar.herokuapp.com/](https://hugbunadarhugar.herokuapp.com/). This manual is intended administrative purposes in order to set the program up on a server(?).
 ## Programs
 The following programs are needed to run TicTacToe using a text editor of choice.
 * Java
