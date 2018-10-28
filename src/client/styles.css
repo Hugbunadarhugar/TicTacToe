@@ -1,3 +1,4 @@
+/* Over all default CSS */
 * {
     margin: 0px;
     padding: 0px;
@@ -8,16 +9,15 @@
 }
 
 /* Changing the Tic tac toe headline on the page */
-
 h1 {
     border-bottom-style: solid;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
     padding-top: 20px;
     text-align: center;
     font-size: 40px;
 }
 
-/*The game board*/
+/* The game board class */
 #gameBoard {
     width: 300px;
     position: fixed;
@@ -26,6 +26,7 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+/* The score board class */
 #scoreBoard {
     width: 400px;
     position: fixed;
@@ -35,18 +36,19 @@ h1 {
     text-align: left;
 }
 
-/* For whose turn it is*/
-
+/* For whose turn it is */
 #player {
     padding-bottom: 20px;
 }
 
+/* The game board table */
 table {
     border-collapse: collapse;
     width: 100%;
     height: 100%;
 }
 
+/* The game board fields */
 td {
     height: 100px;
     width: 100px;
@@ -55,8 +57,7 @@ td {
     font-size: 50px;
 }
 
-/* So the border around the table doesnt show */
-
+/* So the border around the table doesnt show: */
 td:first-of-type {
     border-top-color: transparent;
     border-left-color: transparent;
@@ -75,8 +76,7 @@ tr:nth-child(3) td {
     border-bottom-color: transparent;
 }
 
-/*Input button (Play again button)*/
-
+/* Play again button */
 input[type=button] {
     position: fixed;
     top: 90%;

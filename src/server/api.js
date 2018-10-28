@@ -1,4 +1,5 @@
-// src/api.js
+// src/server/api.js
+
 const express = require("express");
 const router = express.Router();
 const ticTacToe = require("../logic/ticTacToe");

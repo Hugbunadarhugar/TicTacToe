@@ -1,5 +1,7 @@
 const Game = require('./ticTacToe');
 
+// ---  Testing if the game board is successfully initialized ---
+
 it("should begin a new game with an empty gameboard", () => {
   function testResetCanvas(){
     Game.resetCanvas();
@@ -9,6 +11,10 @@ it("should begin a new game with an empty gameboard", () => {
     [" ", " ", " "],
     [" ", " ", " "]]);
 });
+
+// ---------------------------------------------------------------
+
+// ------- Checking if the game board responds to clicking -------
 
 it("should return X as the first element", () => {
   Game.resetCanvas();
@@ -30,7 +36,6 @@ it ("should change active player from O to X", () => {
   expect(Game.getActivePlayer()).toBe("X");
 });
 
-
 it ("should not change the gameboard when the same field is clicked twice", () => {
   Game.resetCanvas();
   Game.boxClicked(0,0); 
@@ -39,6 +44,18 @@ it ("should not change the gameboard when the same field is clicked twice", () =
   [" ", " ", " "],
   [" ", " ", " "]])
 });
+
+it("should fill the gameField array with the current active player", () => {
+  Game.activePlayer = "X";
+  Game.fillArray();
+  expect(Game.getGamefield()).toEqual([["X", "X", "X"],
+  ["X", "X", "X"],
+  ["X", "X", "X"]]);
+});
+
+// ---------------------------------------------------------------
+
+// --------------  Testing if the game has a winner --------------
 
 it("should return a win on a vertical row", () => {
   Game.resetCanvas();
@@ -58,7 +75,6 @@ it("should return a win on a horizontal row", () => {
   expect(Game.getWin()).toBe(true);
 });
 
-
 it("should return a win on a right side diagonal row", () => {
   Game.resetCanvas();
   Game.boxClicked(0,0); 
@@ -77,6 +93,9 @@ it("should return a win on a left side diagonal row", () => {
   expect(Game.getWin()).toBe(true);
 });
 
+// ---------------------------------------------------------------
+
+// -------------  Testing if the game ends in a tie --------------
 
 it("should return a tie on a full field", () => {
   Game.gameField = [["X", "O", "O"],
@@ -86,13 +105,9 @@ it("should return a tie on a full field", () => {
   expect(Game.getWin()).toBe(true);
 });
 
-it("should fill the gameField array with the current active player", () => {
-  Game.activePlayer = "X";
-  Game.fillArray();
-  expect(Game.getGamefield()).toEqual([["X", "X", "X"],
-  ["X", "X", "X"],
-  ["X", "X", "X"]]);
-});
+// ---------------------------------------------------------------
+
+// ----------------  Testing the score board  --------------------
 
 it("should raise the score of X", () => {
   Game.xScore = 0;
