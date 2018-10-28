@@ -31,4 +31,14 @@ it ("should change active player from O to X", () => {
 });
 
 
+it ("should not change the gameboard when the same field is clicked twice", () => {
+  Game.resetCanvas();
+  Game.boxClicked(0,0); 
+  Game.boxClicked(0,0);
+  expect(Game.getGamefield()).toEqual([["X", " ", " "],
+  [" ", " ", " "],
+  [" ", " ", " "]])
+});
+
+
 

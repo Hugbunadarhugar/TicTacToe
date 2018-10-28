@@ -18,6 +18,10 @@ function resetCanvas() {
 function boxClicked(x, y) {
     if (gameField[x][y] == " "){
         gameField[x][y] = activePlayer;
+        return true;
+    }
+    else {
+        return false;
     }
 }
 

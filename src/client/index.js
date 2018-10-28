@@ -10,8 +10,12 @@ $box.on("click", function (event) {
     var x = Math.floor((event.clientX - gameBoard.getBoundingClientRect().left) / 100);
     var y = Math.floor((event.clientY - gameBoard.getBoundingClientRect().top) / 100);
 
-    ticTacToe.boxClicked(x,y);
-    player = ticTacToe.getActivePlayer();
-    $(this).html(player);
-    player = ticTacToe.changePlayers();
+    if(ticTacToe.boxClicked(x,y)){
+        player = ticTacToe.getActivePlayer();
+        $(this).html(player);
+        player = ticTacToe.changePlayers();
+    }
+    else{
+        alert("Please click on an empty field.");
+    }
 });
