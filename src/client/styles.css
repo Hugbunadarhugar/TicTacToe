@@ -1,11 +1,44 @@
-/*The game board*/
+* {
+    margin: 0px;
+    padding: 0px;
+    /* Added times new roman just in case the google fonts don't work */
+    font-family: 'Courgette', 'Arimo', 'Oxygen','Times New Roman';
+    background-color: rgb(255, 221, 221);
+    font-size: 18px;
+}
 
+/* Changing the Tic tac toe headline on the page */
+
+h1 {
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/*The game board*/
 #gameBoard {
     width: 300px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#scoreBoard {
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+/* For whose turn it is*/
+
+#player {
+    padding-bottom: 20px;
 }
 
 table {
