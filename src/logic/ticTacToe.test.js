@@ -40,5 +40,13 @@ it ("should not change the gameboard when the same field is clicked twice", () =
   [" ", " ", " "]])
 });
 
+it("should return a win on a vertical row", () => {
+  Game.resetCanvas();
+  Game.boxClicked(0,0); 
+  Game.boxClicked(0,1);
+  Game.boxClicked(0,2);
+  Game.checkVertical(0);
+  expect(Game.getWin()).toBe(true);
+})
 
 

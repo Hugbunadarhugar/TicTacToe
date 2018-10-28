@@ -20,6 +20,13 @@ $box.on("click", function (event) {
     else{
         alert("Please click on an empty field.");
     }
-      //Telling whose turn it is
-      turn.innerText =  ticTacToe.getActivePlayer() + ", It's your turn!";
+    //Checking if the last play was a winning play
+    if(ticTacToe.checkForWin(x, y)) {
+        turn.innerText = "Game over!";
+        $(board).addClass("Game over");
+    }
+    else{
+        //Telling whose turn it is
+        turn.innerText =  ticTacToe.getActivePlayer() + ", It's your turn!";
+    }
 });
