@@ -11,7 +11,20 @@ var oScoreText = document.getElementById("oScore");
  //Telling whose turn it is
  turn.innerText =  ticTacToe.getActivePlayer() + ", It's your turn!";
 
-var $box = $("td");
+ var $box = $("td");
+
+//start game button
+var reset = document.getElementById("reset");
+reset.addEventListener("click", resetButton);
+
+function resetButton() {
+     ticTacToe.resetCanvas();
+    //To empty the td's
+    for (i = 0; i < $box.length; i++) {
+        $($box[i]).html("");
+    }
+    $(board).removeClass("Game over");
+}
 
 $box.on("click", function (event) {
     //Getting the cordinates
@@ -25,6 +38,7 @@ $box.on("click", function (event) {
             ticTacToe.raiseScore();
             turn.innerText = "Game over!";
             $(board).addClass("Game over");
+            scoreText();
         }
         else if(ticTacToe.checkTie() && !$(board).hasClass("Game over")){
             turn.innerText = "It's a tie!";
@@ -35,7 +49,6 @@ $box.on("click", function (event) {
             //Telling whose turn it is
             turn.innerText =  ticTacToe.getActivePlayer() + ", It's your turn!";
         }
-        scoreText();
     }
     else if($(board).hasClass("Game over")){
         alert("The game is over.");

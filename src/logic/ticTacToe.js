@@ -3,8 +3,8 @@ var activePlayer;
 //Variable to keep track if there is a winner in the match
 var win;
 //To keep track of each player's score
-var xScore;
-var oScore;
+var xScore = 0;
+var oScore = 0;
 //To start the game
 resetCanvas();
 
@@ -17,9 +17,6 @@ function resetCanvas() {
     win = false;
     //Setting the starting player as X
     activePlayer = "X";
-    //No score in the beginning
-    xScore = 0;
-    oScore = 0;
 }
 
 //Clicking on a field
