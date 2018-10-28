@@ -2,6 +2,8 @@ const _ = require("lodash");
 const ticTacToe = require('../logic/ticTacToe');
 const css = require("./styles.css");
 var player = "X";
+//For whose turn it is
+var turn = document.getElementById("player");
 
 var $box = $("td");
 
@@ -18,4 +20,6 @@ $box.on("click", function (event) {
     else{
         alert("Please click on an empty field.");
     }
+      //Telling whose turn it is
+      turn.innerText =  ticTacToe.getActivePlayer() + ", It's your turn!";
 });

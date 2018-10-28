@@ -26,6 +26,21 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+#scoreBoard {
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+/* For whose turn it is*/
+
+#player {
+    padding-bottom: 20px;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
