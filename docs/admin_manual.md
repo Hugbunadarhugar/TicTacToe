@@ -5,7 +5,7 @@ This administration manual is intended for a well-known game of TicTacToe. The g
 
 ## Programs
 The following programs are needed to run TicTacToe using a text editor of choice.
-* Java
+* Node
 * Git Bash (for Windows) or Terminal (for MacOS and Linux)
 * A GitHub account
 
