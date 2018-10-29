@@ -27,4 +27,4 @@ To run the project locally, use the following commands:
 * npm start (to start the server, it listens on port 8080)
 
 ## Tests
-The unit tests are stored within each JavaScript file respectively in a .test.js file. The tests are run with the following command npm test.
+The unit tests are stored within each JavaScript file respectively in a .test.js file. The tests are run with the following command npm test and use testing framework jest and supertest for HTTP testing.
