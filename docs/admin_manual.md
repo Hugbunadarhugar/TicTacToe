@@ -1,7 +1,7 @@
 # Administration manual
 
 ## Introduction
-This administration manual is intended for a well-known game of TicTacToe. The game is accessible via browser, following this link: [https://hugbunadarhugar.herokuapp.com/](https://hugbunadarhugar.herokuapp.com/). This manual is intended for administrative purposes in order to set the program up on a server.
+This administration manual is intended for a well-known game of TicTacToe. The game is accessible via browser, following this link: [https://hugbunadarhugar.herokuapp.com/](https://hugbunadarhugar.herokuapp.com/). This manual is intended for administrative purposes in order to set the program up on a client machine.
 
 ## Programs
 The following programs are needed to run TicTacToe using a text editor of choice.
@@ -21,8 +21,7 @@ The following programs are needed to run TicTacToe using a text editor of choice
 
 ## Run
 In order to run the TicTacToe program locally, use the following commands:
-* npm build (to build the project)
-* npm run (to run the project)
+* npm run build (to build the project, this is only on the client side)
 * npm start (to start the server, it listens on port 5000)
 * npm run startCon (to run the client and the API at the same time)
 * npm run mdtopdf (to convert markdown to pdf/ also updates the pdf files if the markdowns are changed)
