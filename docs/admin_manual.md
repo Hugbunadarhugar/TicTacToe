@@ -1,15 +1,24 @@
 # Administration manual
+
 ## Introduction
-This administration manual is intended for a well-known game of TicTacToe. The game is accessible via browser, following this link: [https://hugbunadarhugar.herokuapp.com/](https://hugbunadarhugar.herokuapp.com/). This manual is intended administrative purposes in order to set the program up on a server(?).
+This administration manual is intended for a well-known game of TicTacToe. The game is accessible via browser, following this link: [https://hugbunadarhugar.herokuapp.com/](https://hugbunadarhugar.herokuapp.com/). This manual is intended for administrative purposes in order to set the program up on a server.
+
 ## Programs
 The following programs are needed to run TicTacToe using a text editor of choice.
 * Java
 * Git Bash (for Windows) or Terminal (for MacOS and Linux)
 * A GitHub account
+
 ## Installation
-* Clone git repository: [https://github.com/Hugbunadarhugar/TicTacToe.git](https://github.com/Hugbunadarhugar/TicTacToe.git)
+* Install git
 * Set up git
-* Install Java
+* Clone git repository: [https://github.com/Hugbunadarhugar/TicTacToe.git](https://github.com/Hugbunadarhugar/TicTacToe.git)
+* Install Node.js
+
+* Sign in Heroku or sign up on Heroku.com [https://heroku.com]
+* Set up Heroku with their toolbelt
+* Log in to Heroku
+
 ## Run
 In order to run the TicTacToe program locally, use the following commands:
 * npm build (to build the project)
