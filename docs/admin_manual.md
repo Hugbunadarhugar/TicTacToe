@@ -5,7 +5,7 @@ This administration manual is intended for a well-known game of TicTacToe. The g
 
 ## Programs
 The following programs are needed to run TicTacToe using a text editor of choice.
-* Node
+* Node.js and npm
 * Git Bash (for Windows) or Terminal (for MacOS and Linux)
 * A GitHub account
 
@@ -13,7 +13,7 @@ The following programs are needed to run TicTacToe using a text editor of choice
 * Install git
 * Set up git
 * Clone git repository: [https://github.com/Hugbunadarhugar/TicTacToe.git](https://github.com/Hugbunadarhugar/TicTacToe.git)
-* Install Node.js
+* Install Node.js and npm
 
 * Sign in Heroku or sign up on Heroku.com [https://heroku.com]
 * Set up Heroku with their toolbelt
