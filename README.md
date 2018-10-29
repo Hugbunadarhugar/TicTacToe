@@ -9,7 +9,7 @@ This project was made for the course SC-T-303 Software Engineering at Reykjavík
 - Hugrún Hannesdóttir
 - Júlía Ingadóttir
 - Jóhann Hinrik Jónsson
-- Natalia López
+- Natalia López Peralta
 - Þorgeir Kristján Þorgeirsson
 ## The game
 ![alt text](https://raw.githubusercontent.com/Hugbunadarhugar/TicTacToe/master/docs/site.png "State diagram")
